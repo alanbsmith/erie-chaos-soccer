@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+		href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+		rel="stylesheet"
+		/>
+		<title>Erie Chaos SC</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  :root {
+/* playground color palette */
+
+/* color */
+--color-bg: #010101;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+	min-height: 100vh;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    font-family: Roboto Condensed, sans serif;
+  }
+</style>
