@@ -1,0 +1,64 @@
+---
+interface Props {
+  number: string;
+  firstName: string;
+  lastName: string;
+}
+
+const { number, firstName, lastName } = Astro.props;
+---
+
+<li class="player">
+  <div class="player__number">{number}</div>
+  <p class="player__first-name">{firstName}</p>
+  <p class="player__last-name">{lastName}</p>
+</li>
+<style>
+  .player {
+    display: grid;
+    grid-template-columns: 4.5rem 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    /* border: solid 0.125rem #; */
+    background: #220042;
+    border-radius: 0.5rem;
+    min-height: 5rem;
+    grid-column-gap: 1rem;
+    min-height: 5rem;
+  }
+
+  .player:last-child() {
+    margin-bottom: 12rem;
+  }
+
+
+  .player__number {
+    display: grid;
+    grid-area:  1 / 1 / 3 / 2;
+    color: #fff;
+    background: #331854;
+    border-radius: 0.4rem 0 0 0.5rem;
+    /* border-inline-end: solid 0.125rem var(--color-border-default); */
+    align-items: center;
+    justify-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    height: 5rem;
+  }
+
+  .player__first-name {
+    margin: 0;
+    color: #bab5c7;
+    font-size: 1.5rem;
+    align-items:end;
+    display: grid;;
+  }
+
+  .player__last-name {
+    margin: 0;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+</style>

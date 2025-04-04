@@ -1,0 +1,71 @@
+---
+import dayjs from 'dayjs';
+
+interface Props {
+  date: string;
+  homeTeam: string;
+  awayTeam: string;
+  isNextMatch?: boolean;
+}
+
+const { date, homeTeam, awayTeam, isNextMatch = false } = Astro.props;
+
+const formattedDate = dayjs(date).format('MMM DD');
+const formattedTime = dayjs(date).format('hh:mma')
+---
+
+<li class={`match${isNextMatch ? ' accent-match' : ''}`}>
+  <div class={`match__date${isNextMatch ? ' accent-match__date' : ''}`}>
+    {formattedDate}
+  </div>
+  <div class="match__time">{formattedTime}</div>
+  <div class="match__info">{homeTeam} v {awayTeam}</div>
+</li>
+<style>
+  .match {
+    display: flex;
+    color: #9d97a9;
+    font-size: 1.125rem;
+  }
+
+  .match:last-child() {
+    margin-bottom: 5rem;
+  }
+
+  .match__date {
+    flex: 1;
+    padding: 1rem;
+    justify-content: center;
+    color: #9d97a9;
+    font-weight: bold;
+    min-width: 6rem;
+    font-size: 1.25rem;
+    align-items: center;
+    display: flex;
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+
+  .match__time {
+    display: flex;
+    flex: 1;
+    padding: 1rem;
+    align-items: center;
+  }
+
+  .match__info {
+    display: flex;
+    flex: 4;
+    padding: 1rem;
+    align-items: center;
+  }
+
+  .accent-match {
+    background: #220042;
+    border-radius: 0.5rem;
+  }
+
+  .accent-match__date {
+    color: #fff;
+    background-color: #331854;
+  }
+</style>

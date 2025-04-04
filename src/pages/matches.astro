@@ -1,0 +1,53 @@
+---
+import dayjs from 'dayjs';
+
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro'
+import Match from '../components/Match.astro';
+
+import matches from '../../data/matches.json';
+
+const previousMatches = matches.filter(match => dayjs().isAfter(dayjs(match.date)));
+const upcomingMatches = matches.filter(match => dayjs().isBefore(dayjs(match.date)));
+const nextMatch = matches.find(match => dayjs().isBefore(dayjs(match.date)));
+---
+
+<Layout>
+	<Hero title="Matches" />
+	<h2 class="subtitle">Upcoming</h2>
+	<ul class="match-list">
+		{upcomingMatches.map(match => {
+			const isNext = !!(nextMatch) && match.id === nextMatch?.id;
+			return (
+				<Match isNextMatch={isNext} date={match.date} homeTeam={match.homeTeam} awayTeam={match.awayTeam} />
+			)
+		}
+		)}
+	</ul>
+	{
+		previousMatches.length ? (
+		<h2 class="subtitle">Previous</h2>
+			<ul class="match-list">
+				{previousMatches.map(match => (
+					<Match date={match.date} homeTeam={match.homeTeam} awayTeam={match.awayTeam} />
+				))}
+			</ul>
+		) : null
+	}
+</Layout>
+<style>
+	.match-list {
+		display: flex;
+		flex-direction: column;
+		/* border: solid 0.125rem var(--color-accent-strong); */
+		border-radius: 0.5rem;
+	}
+
+	.subtitle {
+		margin: 0;
+		font-style: italic;
+		color: var(--color-border-default);
+		font-size: 1.5rem;
+		font-weight: 400;
+	}
+</style>

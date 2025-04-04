@@ -1,0 +1,56 @@
+[
+  {
+    "id": "1",
+    "matchWeek": 1,
+    "date": "04-05-2025 11:00:00",
+    "homeTeam": "Erie Chaos",
+    "awayTeam": "Team Yannett",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "id": "2",
+    "matchWeek": 2,
+    "date": "04-12-2025 11:00:00",
+    "homeTeam": "Erie Chaos",
+    "awayTeam": "Team Chapman",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "id": "3",
+    "matchWeek": 2,
+    "date": "04-19-2025 13:00:00",
+    "homeTeam": "Team Mockler",
+    "awayTeam": "Erie Chaos",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "id": "4",
+    "matchWeek": 3,
+    "date": "04-19-2025 14:00:00",
+    "homeTeam": "Erie Chaos",
+    "awayTeam": "PRA Miners",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "id": "5",
+    "matchWeek": 4,
+    "date": "04-26-2025 12:00:00",
+    "homeTeam": "Team Carroll",
+    "awayTeam": "Erie Chaos",
+    "homeScore": 0,
+    "awayScore": 0
+  },
+  {
+    "id": "6",
+    "matchWeek": 5,
+    "date": "05-03-2025 9:00:00",
+    "homeTeam": "Team Chapman",
+    "awayTeam": "Erie Chaos",
+    "homeScore": 0,
+    "awayScore": 0
+  }
+]

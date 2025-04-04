@@ -1,28 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
 ---
 
 <Layout>
-	<main>
-		<img
-			src="logo.svg"
-			class="home__crest"
-			alt="erie chaos soccer shield"
-		/>
-	</main>
+	<img src="logo.svg" class="home__crest" alt="erie chaos soccer logo"/>
+	<p class="tagline">Bring the Chaos!</p>
 </Layout>
 <style>
-	main {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		padding: 1rem;
-		min-height: 100vh;
-	}
-
 	img {
 		height: 20rem;
 	}
 
+	.tagline {
+		font-style: italic;
+		font-size: 1.5rem;
+		color: var(--color-accent-soft);
+		align-self: center;
+		margin: 0;
+	}
 </style>
