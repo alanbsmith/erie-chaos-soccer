@@ -1,3 +1,7 @@
+---
+import Nav from '../components/Nav.astro';
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -13,31 +17,89 @@
 		<title>Erie Chaos SC</title>
 	</head>
 	<body>
-		<slot />
+		<Nav />
+		<main>
+			<slot />
+		</main>
 	</body>
 </html>
-
-<style>
+<style is:global>
   * {
     box-sizing: border-box;
   }
 
-  :root {
+/* 
+	#B874E8
+	#7000BF
+	#560591
+	#290245
+*/
 /* playground color palette */
 
 /* color */
---color-bg: #010101;
+/* --color-50: #f7f3ff;
+--color-100: #deccff;
+--color-200: #c6a4ff;
+--color-300: #b077ff;
+--color-400: #994af3;
+--color-500: #7e21d4;
+--color-600: #6d00bd;
+--color-700: #520091;
+--color-800: #380066;
+--color-900: #220042; */
+
+  :root {
+		--color-bg: #fff /** */;
+		--color-bg-005: #fff /** */;
+		--color-bg-010: #fff /** */;
+		--color-bg-015: #fff /** */;
+		--color-bg-020: #fff /** */;
+
+		--color-text-070: hsl(240, 30%, 70%);
+		--color-text-080: hsl(240, 30%, 80%);
+		--color-text-090: hsl(240, 30%, 90%);
+		--color-text-100: hsl(240, 30%, 100%);
+
+    --color-border-default: #817b8c;
+
+		--color-bg-default: #010101;
+
+		--color-accent-default: #994af3;
+		--color-accent-soft: #994af3;
+		--color-accent-strong: #6d00bd;
   }
 
   html,
   body {
     margin: 0;
     padding: 0;
-	min-height: 100vh;
+		min-height: 100vh;
+		background-color: var(--color-bg-default);
+		font-family: Roboto Condensed, sans serif;
   }
 
-  body {
-    background-color: var(--color-bg);
-    font-family: Roboto Condensed, sans serif;
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+  main {
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		max-width: 48rem;
+  	min-width: 24rem;
+		padding: 0 1rem;
+		transition: padding 250ms;
+		max-height: -webkit-fill-available;
+    position: relative;
+		gap: 1rem;
   }
+
+	@media (min-width: 48rem) {
+		main {
+			padding: 0;
+		}
+	}
 </style>
