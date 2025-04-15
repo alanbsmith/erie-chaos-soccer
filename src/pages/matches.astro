@@ -7,39 +7,68 @@ import Match from '../components/Match.astro';
 
 import matches from '../../data/matches.json';
 
-const previousMatches = matches.filter(match => dayjs().isAfter(dayjs(match.date)));
+const previousMatches = matches.filter(match => dayjs().isAfter(dayjs(match.date))).sort((a,b) => b.date.localeCompare(a.date));
 const upcomingMatches = matches.filter(match => dayjs().isBefore(dayjs(match.date)));
 const nextMatch = matches.find(match => dayjs().isBefore(dayjs(match.date)));
 ---
 
 <Layout>
 	<Hero title="Matches" />
-	<h2 class="subtitle">Upcoming</h2>
-	<ul class="match-list">
-		{upcomingMatches.map(match => {
-			const isNext = !!(nextMatch) && match.id === nextMatch?.id;
-			return (
-				<Match isNextMatch={isNext} date={match.date} homeTeam={match.homeTeam} awayTeam={match.awayTeam} />
-			)
-		}
-		)}
-	</ul>
+	{
+		upcomingMatches.length ? (
+			<section class="matches">
+			<h2 class="subtitle" id="upcoming">Upcoming</h2>
+			<ul class="match-list">
+				{upcomingMatches.map(match => {
+					const isNext = !!(nextMatch) && match.id === nextMatch?.id;
+					return (
+						<Match
+							isNextMatch={isNext}
+							date={match.date}
+							homeTeam={match.homeTeam}
+							awayTeam={match.awayTeam}
+							status={match.status}
+							homeScore={match.homeScore}
+							awayScore={match.awayScore}
+						/>
+					)
+				})}
+			</ul>
+			</section>
+		) : null
+	}
 	{
 		previousMatches.length ? (
-		<h2 class="subtitle">Previous</h2>
-			<ul class="match-list">
-				{previousMatches.map(match => (
-					<Match date={match.date} homeTeam={match.homeTeam} awayTeam={match.awayTeam} />
-				))}
-			</ul>
+			<section class="matches">
+				<h2 class="subtitle" id="previous">Previous</h2>
+				<ul class="match-list">
+					{previousMatches.map(match => (
+						<Match
+							date={match.date}
+							homeTeam={match.homeTeam}
+							awayTeam={match.awayTeam}
+							status={match.status}
+							homeScore={match.homeScore}
+							awayScore={match.awayScore}
+						/>
+					))}
+				</ul>
+			</section>
 		) : null
 	}
 </Layout>
 <style>
+	.matches {
+		padding-bottom: 5rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
 	.match-list {
 		display: flex;
 		flex-direction: column;
-		/* border: solid 0.125rem var(--color-accent-strong); */
+		border: solid 0.0625rem var(--color-accent-strong);
 		border-radius: 0.5rem;
 	}
 

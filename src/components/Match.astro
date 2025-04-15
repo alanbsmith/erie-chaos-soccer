@@ -5,21 +5,30 @@ interface Props {
   date: string;
   homeTeam: string;
   awayTeam: string;
+  homeScore: number | null;
+  awayScore: number | null;
   isNextMatch?: boolean;
+  status: string;
 }
 
-const { date, homeTeam, awayTeam, isNextMatch = false } = Astro.props;
+const { date, homeTeam, awayTeam, homeScore, awayScore, status, isNextMatch = false } = Astro.props;
 
 const formattedDate = dayjs(date).format('MMM DD');
-const formattedTime = dayjs(date).format('hh:mma')
+const formattedTime = dayjs(date).format('h:mma');
+
+const shouldShowMatchScore =  homeScore !== null && awayScore !== null;
 ---
 
 <li class={`match${isNextMatch ? ' accent-match' : ''}`}>
-  <div class={`match__date${isNextMatch ? ' accent-match__date' : ''}`}>
-    {formattedDate}
+  <div class={`match__datetime ${isNextMatch ? ' accent-match__datetime' : ''}`}>
+    <div class="match__date">{formattedDate}</div>
+    <div class="match__time">{formattedTime}</div>
   </div>
-  <div class="match__time">{formattedTime}</div>
   <div class="match__info">{homeTeam} v {awayTeam}</div>
+  <div class="match__score">
+    {status === 'cancelled' && '--'}
+    {shouldShowMatchScore && `${homeScore} : ${awayScore}`}
+  </div>
 </li>
 <style>
   .match {
@@ -28,28 +37,30 @@ const formattedTime = dayjs(date).format('hh:mma')
     font-size: 1.125rem;
   }
 
-  .match:last-child() {
+  /* .match:last-child() {
     margin-bottom: 5rem;
-  }
+  } */
 
-  .match__date {
+  .match__datetime {
+    color: #9d97a9;
     flex: 1;
+    flex-direction: column;
+    gap: 0.25rem;
     padding: 1rem;
     justify-content: center;
-    color: #9d97a9;
-    font-weight: bold;
     min-width: 6rem;
-    font-size: 1.25rem;
     align-items: center;
     display: flex;
     border-radius: 0.5rem 0 0 0.5rem;
   }
+  
+  .match__date {
+    font-weight: bold;
+    font-size: 1.25rem;    
+  }
 
   .match__time {
-    display: flex;
-    flex: 1;
-    padding: 1rem;
-    align-items: center;
+    font-size: 1.125rem;
   }
 
   .match__info {
@@ -59,13 +70,23 @@ const formattedTime = dayjs(date).format('hh:mma')
     align-items: center;
   }
 
-  .accent-match {
-    background: #220042;
-    border-radius: 0.5rem;
+  .match__score {
+    display: flex;
+    flex: 1;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    color: #9d97a9;
   }
 
-  .accent-match__date {
+  .accent-match {
+    background: #220042;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
+  .accent-match__datetime {
     color: #fff;
     background-color: #331854;
+    border-radius: 0.5rem 0 0 0;
   }
 </style>
