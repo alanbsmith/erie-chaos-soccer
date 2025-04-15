@@ -6,7 +6,8 @@
     "homeTeam": "Erie Chaos",
     "awayTeam": "Team Yannett",
     "homeScore": 0,
-    "awayScore": 0
+    "awayScore": 0,
+    "status": "cancelled"
   },
   {
     "id": "2",
@@ -14,17 +15,19 @@
     "date": "04-12-2025 11:00:00",
     "homeTeam": "Erie Chaos",
     "awayTeam": "Team Chapman",
-    "homeScore": 0,
-    "awayScore": 0
+    "homeScore": 5,
+    "awayScore": 0,
+    "status": "active"
   },
   {
     "id": "3",
-    "matchWeek": 2,
+    "matchWeek": 3,
     "date": "04-19-2025 13:00:00",
     "homeTeam": "Team Mockler",
     "awayTeam": "Erie Chaos",
     "homeScore": 0,
-    "awayScore": 0
+    "awayScore": 0,
+    "status": "active"
   },
   {
     "id": "4",
@@ -33,7 +36,8 @@
     "homeTeam": "Erie Chaos",
     "awayTeam": "PRA Miners",
     "homeScore": 0,
-    "awayScore": 0
+    "awayScore": 0,
+    "status": "active"
   },
   {
     "id": "5",
@@ -42,7 +46,8 @@
     "homeTeam": "Team Carroll",
     "awayTeam": "Erie Chaos",
     "homeScore": 0,
-    "awayScore": 0
+    "awayScore": 0,
+    "status": "active"
   },
   {
     "id": "6",
@@ -51,6 +56,7 @@
     "homeTeam": "Team Chapman",
     "awayTeam": "Erie Chaos",
     "homeScore": 0,
-    "awayScore": 0
+    "awayScore": 0,
+    "status": "active"
   }
 ]
