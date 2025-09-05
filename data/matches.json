@@ -2,48 +2,48 @@
   {
     "id": "1",
     "matchWeek": 1,
-    "date": "04-05-2025 11:00:00",
+    "date": "09-06-2025 11:00:00",
     "homeTeam": "Erie Chaos",
-    "awayTeam": "Team Yannett",
+    "awayTeam": "Jamison Shelton",
     "homeScore": null,
     "awayScore": null,
-    "status": "cancelled"
+    "status": "active"
   },
   {
     "id": "2",
     "matchWeek": 2,
-    "date": "04-12-2025 11:00:00",
+    "date": "09-13-2025 10:00:00",
     "homeTeam": "Erie Chaos",
-    "awayTeam": "Team Chapman",
-    "homeScore": 5,
-    "awayScore": 0,
+    "awayTeam": "Scott Goldstone",
+    "homeScore": null,
+    "awayScore": null,
     "status": "active"
   },
   {
     "id": "3",
     "matchWeek": 3,
-    "date": "04-19-2025 13:00:00",
-    "homeTeam": "Team Mockler",
+    "date": "09-20-2025 11:00:00",
+    "homeTeam": "Roger Yannett",
     "awayTeam": "Erie Chaos",
     "homeScore": null,
     "awayScore": null,
-    "status": "cancelled"
+    "status": "active"
   },
   {
     "id": "4",
-    "matchWeek": 3,
-    "date": "04-19-2025 14:00:00",
+    "matchWeek": 4,
+    "date": "09-27-2025 9:00:00",
     "homeTeam": "Erie Chaos",
-    "awayTeam": "PRA Miners",
+    "awayTeam": "PRA - Mike Colacchio",
     "homeScore": null,
     "awayScore": null,
-    "status": "cancelled"
+    "status": "active"
   },
   {
     "id": "5",
-    "matchWeek": 4,
-    "date": "04-26-2025 12:00:00",
-    "homeTeam": "Team Carroll",
+    "matchWeek": 5,
+    "date": "10-04-2025 10:00:00",
+    "homeTeam": "David Ellis",
     "awayTeam": "Erie Chaos",
     "homeScore": null,
     "awayScore": null,
@@ -51,30 +51,10 @@
   },
   {
     "id": "6",
-    "matchWeek": 5,
-    "date": "05-01-2025 17:30:00",
-    "homeTeam": "Team Mockler",
-    "awayTeam": "Erie Chaos",
-    "homeScore": null,
-    "awayScore": null,
-    "status": "active"
-  },
-  {
-    "id": "7",
-    "matchWeek": 5,
-    "date": "05-03-2025 9:00:00",
-    "homeTeam": "Team Chapman",
-    "awayTeam": "Erie Chaos",
-    "homeScore": null,
-    "awayScore": null,
-    "status": "active"
-  },
-  {
-    "id": "8",
     "matchWeek": 6,
-    "date": "05-10-2025 12:00:00",
-    "homeTeam": "Team Hampton",
-    "awayTeam": "Erie Chaos",
+    "date": "10-11-2025 12:00:00",
+    "homeTeam": "Erie Chaos",
+    "awayTeam": "Jeff Rummer",
     "homeScore": null,
     "awayScore": null,
     "status": "active"
