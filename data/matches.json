@@ -2,9 +2,9 @@
   {
     "id": "1",
     "matchWeek": 1,
-    "date": "09-06-2025 11:00:00",
-    "homeTeam": "Erie Chaos",
-    "awayTeam": "Team Shelton",
+    "date": "04-04-2026 12:00:00",
+    "homeTeam": "Team Goldstone",
+    "awayTeam": "Erie Chaos",
     "homeScore": null,
     "awayScore": null,
     "status": "active"
@@ -12,37 +12,7 @@
   {
     "id": "2",
     "matchWeek": 2,
-    "date": "09-13-2025 10:00:00",
-    "homeTeam": "Erie Chaos",
-    "awayTeam": "Team Goldstone",
-    "homeScore": null,
-    "awayScore": null,
-    "status": "active"
-  },
-  {
-    "id": "3",
-    "matchWeek": 3,
-    "date": "09-20-2025 11:00:00",
-    "homeTeam": "Team Yannett",
-    "awayTeam": "Erie Chaos",
-    "homeScore": null,
-    "awayScore": null,
-    "status": "active"
-  },
-  {
-    "id": "4",
-    "matchWeek": 4,
-    "date": "09-27-2025 9:00:00",
-    "homeTeam": "Erie Chaos",
-    "awayTeam": "PRA Miners",
-    "homeScore": null,
-    "awayScore": null,
-    "status": "active"
-  },
-  {
-    "id": "5",
-    "matchWeek": 5,
-    "date": "10-04-2025 10:00:00",
+    "date": "04-11-2026 11:00:00",
     "homeTeam": "Team Ellis",
     "awayTeam": "Erie Chaos",
     "homeScore": null,
@@ -50,9 +20,39 @@
     "status": "active"
   },
   {
+    "id": "3",
+    "matchWeek": 3,
+    "date": "04-18-2026 10:00:00",
+    "homeTeam": "Erie Chaos",
+    "awayTeam": "Team Yoder",
+    "homeScore": null,
+    "awayScore": null,
+    "status": "active"
+  },
+  {
+    "id": "4",
+    "matchWeek": 4,
+    "date": "04-25-2026 09:00:00",
+    "homeTeam": "PRA Armstrong",
+    "awayTeam": "Erie Chaos",
+    "homeScore": null,
+    "awayScore": null,
+    "status": "active"
+  },
+  {
+    "id": "5",
+    "matchWeek": 5,
+    "date": "05-02-2026 11:00:00",
+    "homeTeam": "Erie Chaos",
+    "awayTeam": "Team Shelton",
+    "homeScore": null,
+    "awayScore": null,
+    "status": "active"
+  },
+  {
     "id": "6",
     "matchWeek": 6,
-    "date": "10-11-2025 12:00:00",
+    "date": "05-09-2026 12:00:00",
     "homeTeam": "Erie Chaos",
     "awayTeam": "Team Rummer",
     "homeScore": null,
