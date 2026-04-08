@@ -4,7 +4,7 @@ import Hero from '../components/Hero.astro'
 import Player from '../components/Player.astro'
 
 import players from '../../data/players.json';
-const sortedPlayers = players.sort((a,b) => a.number.localeCompare(b.number))
+const sortedPlayers = players.sort((a,b) => Number(a.number) - Number(b.number))
 ---
 
 <Layout>
