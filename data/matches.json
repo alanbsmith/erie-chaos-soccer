@@ -2,8 +2,8 @@
   {
     "id": "1",
     "matchWeek": 1,
-    "date": "04-04-2026 12:00:00",
-    "homeTeam": "Team Goldstone",
+    "date": "08-29-2026 11:00:00",
+    "homeTeam": "Kimberly DeGrazio",
     "awayTeam": "Erie Chaos",
     "homeScore": null,
     "awayScore": null,
@@ -12,19 +12,19 @@
   {
     "id": "2",
     "matchWeek": 2,
-    "date": "04-11-2026 11:00:00",
-    "homeTeam": "Team Ellis",
-    "awayTeam": "Erie Chaos",
+    "date": "09-05-2026 12:00:00",
+    "homeTeam": "Erie Chaos",
+    "awayTeam": "Bye - Labor Day Weekend",
     "homeScore": null,
     "awayScore": null,
-    "status": "active"
+    "status": "cancelled"
   },
   {
     "id": "3",
     "matchWeek": 3,
-    "date": "04-18-2026 10:00:00",
+    "date": "09-12-2026 13:00:00",
     "homeTeam": "Erie Chaos",
-    "awayTeam": "Team Yoder",
+    "awayTeam": "Andy Gradl",
     "homeScore": null,
     "awayScore": null,
     "status": "active"
@@ -32,8 +32,8 @@
   {
     "id": "4",
     "matchWeek": 4,
-    "date": "04-25-2026 09:00:00",
-    "homeTeam": "PRA Armstrong",
+    "date": "09-19-2026 14:00:00",
+    "homeTeam": "Zach Holt",
     "awayTeam": "Erie Chaos",
     "homeScore": null,
     "awayScore": null,
@@ -42,9 +42,9 @@
   {
     "id": "5",
     "matchWeek": 5,
-    "date": "05-02-2026 11:00:00",
+    "date": "09-26-2026 13:00:00",
     "homeTeam": "Erie Chaos",
-    "awayTeam": "Team Shelton",
+    "awayTeam": "Jim Mockler",
     "homeScore": null,
     "awayScore": null,
     "status": "active"
@@ -52,9 +52,19 @@
   {
     "id": "6",
     "matchWeek": 6,
-    "date": "05-09-2026 12:00:00",
+    "date": "10-03-2026 12:00:00",
     "homeTeam": "Erie Chaos",
-    "awayTeam": "Team Rummer",
+    "awayTeam": "Brandon Yoder",
+    "homeScore": null,
+    "awayScore": null,
+    "status": "active"
+  },
+  {
+    "id": "7",
+    "matchWeek": 7,
+    "date": "10-10-2026 11:00:00",
+    "homeTeam": "Keyton Gibson",
+    "awayTeam": "Erie Chaos",
     "homeScore": null,
     "awayScore": null,
     "status": "active"
