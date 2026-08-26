@@ -30,6 +30,7 @@ const nextMatch = matches.find(match => dayjs().isBefore(dayjs(match.date)));
 							status={match.status}
 							homeScore={match.homeScore}
 							awayScore={match.awayScore}
+							hideTime={match.hideTime}
 						/>
 					)
 				})}

@@ -9,9 +9,10 @@ interface Props {
   awayScore: number | null;
   isNextMatch?: boolean;
   status: string;
+  hideTime?: boolean;
 }
 
-const { date, homeTeam, awayTeam, homeScore, awayScore, status, isNextMatch = false } = Astro.props;
+const { date, homeTeam, awayTeam, homeScore, awayScore, status, isNextMatch = false, hideTime = false } = Astro.props;
 
 const formattedDate = dayjs(date).format('MMM DD');
 const formattedTime = dayjs(date).format('h:mma');
@@ -22,7 +23,7 @@ const shouldShowMatchScore =  homeScore !== null && awayScore !== null;
 <li class={`match${isNextMatch ? ' accent-match' : ''}`}>
   <div class={`match__datetime ${isNextMatch ? ' accent-match__datetime' : ''}`}>
     <div class="match__date">{formattedDate}</div>
-    <div class="match__time">{formattedTime}</div>
+    {!hideTime && <div class="match__time">{formattedTime}</div>}
   </div>
   <div class="match__info">{homeTeam} v {awayTeam}</div>
   <div class="match__score">
