@@ -14,10 +14,11 @@
     "matchWeek": 2,
     "date": "09-05-2026 12:00:00",
     "homeTeam": "Erie Chaos",
-    "awayTeam": "Bye - Labor Day Weekend",
+    "awayTeam": "No Game - Labor Day Weekend",
     "homeScore": null,
     "awayScore": null,
-    "status": "cancelled"
+    "status": "cancelled",
+    "hideTime": true
   },
   {
     "id": "3",
